@@ -24,7 +24,7 @@ public class VaccinationApplication {
             logger.info("4. Number of partially vaccinated people");
             logger.info("5. Number of people fully vaccinated");
             logger.info("6. Create vaccination center");
-            logger.info("7. Close vaccionation center");
+            logger.info("7. Close vaccination center");
             logger.info("8. Log out ");
             try {
                 logger.info("Choose an option (1-6): ");
