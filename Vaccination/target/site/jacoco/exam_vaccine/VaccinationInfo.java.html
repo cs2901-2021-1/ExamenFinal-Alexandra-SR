@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>VaccinationInfo.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ExamenFinal-Alexandra-SR</a> &gt; <a href="index.source.html" class="el_package">exam_vaccine</a> &gt; <span class="el_source">VaccinationInfo.java</span></div><h1>VaccinationInfo.java</h1><pre class="source lang-java linenums">package exam_vaccine;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Logger;
+
+public class VaccinationInfo {
+<span class="fc" id="L7">    static final Logger logger = Logger.getLogger(VaccinationInfo.class.getName());</span>
+<span class="fc" id="L8">    private HashMap&lt;Integer, VaccinationCenter&gt; vaccinationCenter =  new HashMap&lt;&gt;();</span>
+    Integer totalVaccinationCompleted;
+    Integer totalVaccinationPartial;
+<span class="fc" id="L11">    private static VaccinationInfo instance = null;</span>
+    public static VaccinationInfo getInstance(){
+<span class="nc bnc" id="L13" title="All 2 branches missed.">        if (instance == null){</span>
+<span class="nc" id="L14">            instance = new VaccinationInfo();</span>
+        }
+<span class="nc" id="L16">        return instance;</span>
+    }
+
+<span class="fc" id="L19">    public VaccinationInfo() {</span>
+<span class="fc" id="L20">        totalVaccinationCompleted =0;</span>
+<span class="fc" id="L21">        totalVaccinationPartial = 0;</span>
+<span class="fc" id="L22">    }</span>
+
+    public String createCenter(Integer id, String address){
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        if (vaccinationCenter.containsKey(id)){</span>
+<span class="fc" id="L26">            logger.info(&quot;Center already existed! &quot;);</span>
+<span class="fc" id="L27">            return (&quot;Center already existed! &quot;);</span>
+        }
+
+        else{
+<span class="fc" id="L31">            var center = new VaccinationCenter(id, address);</span>
+<span class="fc" id="L32">            vaccinationCenter.put(id, center);</span>
+<span class="fc" id="L33">            logger.info(&quot;Center created correctly&quot;);</span>
+<span class="fc" id="L34">            return (&quot;Center created correctly&quot;);</span>
+
+        }
+
+    }
+
+
+
+    public String vaccinationAdvance(){
+<span class="fc" id="L43">        var result= &quot;&quot;;</span>
+<span class="fc" id="L44">        var builder = new StringBuilder();</span>
+<span class="fc" id="L45">        var it = vaccinationCenter.entrySet().iterator();</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        while (it.hasNext()) {</span>
+<span class="fc" id="L47">            Map.Entry&lt;Integer, VaccinationCenter&gt; pair = it.next();</span>
+<span class="fc" id="L48">            var center = pair.getValue();</span>
+<span class="fc" id="L49">            var vacc =  center;</span>
+<span class="fc" id="L50">            result = String.valueOf(builder.append(&quot; Vaccination Advance : &quot;+ vacc.advace() + &quot;\n&quot;));</span>
+<span class="fc" id="L51">            logger.info(result);</span>
+<span class="fc" id="L52">            it.remove();</span>
+<span class="fc" id="L53">        }</span>
+<span class="fc" id="L54">        return result;</span>
+    }
+
+    public String vaccinationCoverage(){
+<span class="fc" id="L58">        var it = vaccinationCenter.entrySet().iterator();</span>
+<span class="fc" id="L59">        var result= &quot;&quot;;</span>
+<span class="fc" id="L60">        var builder = new StringBuilder();</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        while (it.hasNext()) {</span>
+<span class="fc" id="L62">            Map.Entry&lt;Integer, VaccinationCenter&gt; pair = it.next();</span>
+<span class="fc" id="L63">            var center = pair.getValue();</span>
+<span class="fc" id="L64">            var vacc =  center;</span>
+<span class="fc" id="L65">            result = String.valueOf(builder.append(&quot; Vaccination Coverage : &quot;+ vacc.coverage() + &quot;\n&quot;));</span>
+<span class="fc" id="L66">            logger.info(result);</span>
+<span class="fc" id="L67">            it.remove();</span>
+<span class="fc" id="L68">        }</span>
+<span class="fc" id="L69">        return result;</span>
+    }
+
+    public String closeCenter(Integer id){
+<span class="fc bfc" id="L73" title="All 2 branches covered.">        if (vaccinationCenter.containsKey(id)){</span>
+<span class="fc" id="L74">            vaccinationCenter.remove(id);</span>
+<span class="fc" id="L75">            return &quot;Successfully deleted&quot;;</span>
+        }
+        else{
+<span class="fc" id="L78">            logger.info(&quot;Vaccination center doesn't exist&quot;);</span>
+<span class="fc" id="L79">            return &quot;Vaccination center doesn't exist&quot;;</span>
+        }
+
+    }
+
+    public Integer  numberVaccinationCenter(){
+<span class="fc" id="L85">        return  vaccinationCenter.size();</span>
+    }
+
+    public void partialVaccination(int number){
+<span class="nc" id="L89">        totalVaccinationCompleted+= number;</span>
+<span class="nc" id="L90">    }</span>
+
+    public void completeVaccination(int number){
+<span class="nc" id="L93">        totalVaccinationPartial+= number;</span>
+<span class="nc" id="L94">    }</span>
+
+    public String showPartialVaccination(){
+<span class="fc" id="L97">        var result = &quot;Number of partially vaccinated people : &quot;+ totalVaccinationPartial + &quot;\n&quot;;</span>
+<span class="fc" id="L98">        logger.info(result);</span>
+<span class="fc" id="L99">        return  result;</span>
+    }
+
+    public String showCompleteVaccination(){
+<span class="fc" id="L103">        var result = &quot;Number of people fully vaccinated : &quot;+ totalVaccinationCompleted + &quot;\n&quot;;</span>
+<span class="fc" id="L104">        logger.info(result);</span>
+<span class="fc" id="L105">        return result;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

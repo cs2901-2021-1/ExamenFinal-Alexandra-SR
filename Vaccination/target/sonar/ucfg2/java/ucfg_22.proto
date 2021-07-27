@@ -1,21 +1,58 @@
 
-Iexam_vaccine.VaccinationInfo#numberVaccinationCenter()Ljava/lang/Integer;Ä
-vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaC C(+"1*Ã
-1Ä
-vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaD D(!ﬁ
+Oexam_vaccine.VaccinationInfo#closeCenter(Ljava/lang/Integer;)Ljava/lang/String;Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaH H("3*˘
+2Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaJ J(ﬁ
 €
 Ä
-vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaD D(!
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaJ J(
+%2java.util.HashMap"__id*7*5
+exam_vaccine.VaccinationInfo"
+vaccinationCenterÔ
+Ï
+Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaJ J(($
+%3exam_vaccine.VaccinationCenter"__mapRemove*
+
+%2java.util.HashMap*
+
+idjava.lang.Integer"ù
+Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaK K(*
+Successfully deleted*í
+3Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaI I(ﬁ
+€
+Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaI I(
 %0java.util.HashMap"__id*7*5
 exam_vaccine.VaccinationInfo"
-vaccinationCenterœÃ
+vaccinationCenter†ù
 Ä
-vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaD D((	
-%1int"java.util.HashMap#size()I*
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaI I(-
+%1boolean"2java.util.HashMap#containsKey(Ljava/lang/Object;)Z*
 
-%0java.util.HashMap2size()"ê
+%0java.util.HashMap*
+
+idjava.lang.Integer2containsKey(Ljava/lang/Object;)*
+2
+1*î
+1Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaN N(¥
+±
 Ä
-vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaD D()
-	
-%1intB 
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaN N(
+%4java.util.logging.Logger"__id*
+""®•
+Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaN N(;
+
+%5void"2java.util.logging.Logger#info(Ljava/lang/String;)V* 
+
+%4java.util.logging.Logger*$"
+ Vaccination center doesn't exist2info(Ljava/lang/String;)"©
+Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaO O(6$"
+ Vaccination center doesn't exist:
+idjava.lang.IntegerB 
 exam_vaccine.VaccinationInfo

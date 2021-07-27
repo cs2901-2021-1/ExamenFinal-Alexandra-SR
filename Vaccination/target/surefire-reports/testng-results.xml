@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-07-26T21:07:27 PET" name="Surefire suite" finished-at="2021-07-26T21:07:27 PET" duration-ms="184">
+    <groups>
+    </groups>
+    <test started-at="2021-07-26T21:07:27 PET" name="Surefire test" finished-at="2021-07-26T21:07:27 PET" duration-ms="184">
+      <class name="TestApp">
+        <test-method signature="testAdvance()[pri:0, instance:TestApp@7efaad5a]" started-at="2021-07-26T21:07:27 PET" name="testAdvance" finished-at="2021-07-26T21:07:27 PET" duration-ms="76" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdvance -->
+        <test-method signature="testCloseCenterFail()[pri:0, instance:TestApp@7efaad5a]" started-at="2021-07-26T21:07:27 PET" name="testCloseCenterFail" finished-at="2021-07-26T21:07:27 PET" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCloseCenterFail -->
+        <test-method signature="testCloseCenterOK()[pri:0, instance:TestApp@7efaad5a]" started-at="2021-07-26T21:07:27 PET" name="testCloseCenterOK" finished-at="2021-07-26T21:07:27 PET" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCloseCenterOK -->
+        <test-method signature="testCompleteVaccination()[pri:0, instance:TestApp@7efaad5a]" started-at="2021-07-26T21:07:27 PET" name="testCompleteVaccination" finished-at="2021-07-26T21:07:27 PET" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCompleteVaccination -->
+        <test-method signature="testCoverage()[pri:0, instance:TestApp@7efaad5a]" started-at="2021-07-26T21:07:27 PET" name="testCoverage" finished-at="2021-07-26T21:07:27 PET" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCoverage -->
+        <test-method signature="testDarAltaFail()[pri:0, instance:TestApp@7efaad5a]" started-at="2021-07-26T21:07:27 PET" name="testDarAltaFail" finished-at="2021-07-26T21:07:27 PET" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDarAltaFail -->
+        <test-method signature="testDarAltaOK()[pri:0, instance:TestApp@7efaad5a]" started-at="2021-07-26T21:07:27 PET" name="testDarAltaOK" finished-at="2021-07-26T21:07:27 PET" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDarAltaOK -->
+        <test-method signature="testNumberCenter()[pri:0, instance:TestApp@7efaad5a]" started-at="2021-07-26T21:07:27 PET" name="testNumberCenter" finished-at="2021-07-26T21:07:27 PET" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNumberCenter -->
+        <test-method signature="testPartialVaccination()[pri:0, instance:TestApp@7efaad5a]" started-at="2021-07-26T21:07:27 PET" name="testPartialVaccination" finished-at="2021-07-26T21:07:27 PET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPartialVaccination -->
+        <test-method signature="testTime()[pri:0, instance:TestApp@7efaad5a]" started-at="2021-07-26T21:07:27 PET" name="testTime" finished-at="2021-07-26T21:07:27 PET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTime -->
+      </class> <!-- TestApp -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

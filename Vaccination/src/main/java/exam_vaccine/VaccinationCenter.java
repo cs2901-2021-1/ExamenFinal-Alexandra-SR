@@ -50,18 +50,17 @@ public class VaccinationCenter {
 
 
     public float advace() {
-        return  100*(getNumberPartialVaccines()+getNumberFullVaccines())/PEOPLE;
+        return (float) 100*(getNumberPartialVaccines()+getNumberFullVaccines())/PEOPLE;
     }
 
     public float coverage() {
-        return  100*getNumberFullVaccines()/PEOPLE;
+        return (float) 100*getNumberFullVaccines()/PEOPLE;
     }
 
 
     public void morePartial(int number) {
-        var  center= new VaccinationCenter(3, "Av. Larco 2323");
         numberPartialVaccines += number;
-        VaccinationInfo system = new VaccinationInfo();
+        var system = new VaccinationInfo();
         system.partialVaccination(number);
     }
 

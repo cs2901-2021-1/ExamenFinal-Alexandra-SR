@@ -1,0 +1,49 @@
+
+Gexam_vaccine.VaccinationInfo#showPartialVaccination()Ljava/lang/String;Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.java` `(("1*Ò
+1Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaa a(?‰
+·
+Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaaA a(X
+%0java.lang.Integer"__id*=*;
+exam_vaccine.VaccinationInfo"
+totalVaccinationPartialÒ
+Ó
+Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaa a(X
+%1java.lang.String"__concat*,*
+(Number of partially vaccinated people : *
+
+%0java.lang.Integer 
+«
+Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaa a(_
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+\n¬
+ø
+Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javaa a(`
+resultjava.lang.String"__id*
+
+%2java.lang.String¥
+±
+Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javab b(
+%3java.util.logging.Logger"__id*
+""†ù
+Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javab b(
+
+%4void"2java.util.logging.Logger#info(Ljava/lang/String;)V* 
+
+%3java.util.logging.Logger*
+
+resultjava.lang.String2info(Ljava/lang/String;)"°
+Ä
+vC:/Users/alexandra/Desktop/CICLO_5/Ingenier√≠a de Software/Vaccination/src/main/java/exam_vaccine/VaccinationInfo.javac c(
+
+resultjava.lang.StringB 
+exam_vaccine.VaccinationInfo

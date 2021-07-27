@@ -1,0 +1,5 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+ExamenFinal-Alexandra-SR,exam_vaccine,VaccinationApplication,161,0,11,0,60,0,13,0,4,0
+ExamenFinal-Alexandra-SR,exam_vaccine,VaccinationCenter,53,48,0,0,20,11,9,6,9,6
+ExamenFinal-Alexandra-SR,exam_vaccine,VaccinationInfo,26,168,2,8,7,50,4,13,3,9
+ExamenFinal-Alexandra-SR,exam_vaccine,User,49,0,2,0,14,0,4,0,3,0

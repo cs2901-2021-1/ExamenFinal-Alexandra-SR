@@ -1,11 +1,11 @@
 package exam_vaccine;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Logger;
 
 public class VaccinationInfo {
     static final Logger logger = Logger.getLogger(VaccinationInfo.class.getName());
     private HashMap<Integer, VaccinationCenter> vaccinationCenter =  new HashMap<>();
-    private HashMap<String, Integer> ageVaccionation = new HashMap<> ();
     Integer totalVaccinationCompleted;
     Integer totalVaccinationPartial;
     private static VaccinationInfo instance = null;
@@ -16,24 +16,22 @@ public class VaccinationInfo {
         return instance;
     }
 
-
-    void getData(){
-        ageVaccionation = new HashMap<>();
-        ageVaccionation.put("From 18 to 39", 11334787);
-        ageVaccionation.put("From 40 to 49", 4183174);
-        ageVaccionation.put("From 50 to 59", 3277134);
-        ageVaccionation.put("From 60 to 69", 2221241);
-        ageVaccionation.put("From 70 to 79", 1271842);
-        ageVaccionation.put("From 80 to more", 647355);
+    public VaccinationInfo() {
+        totalVaccinationCompleted =0;
+        totalVaccinationPartial = 0;
     }
 
-    public void createCenter(Integer id,  String address){
-        if (vaccinationCenter.containsKey(id))
+    public String createCenter(Integer id, String address){
+        if (vaccinationCenter.containsKey(id)){
             logger.info("Center already existed! ");
+            return ("Center already existed! ");
+        }
+
         else{
             var center = new VaccinationCenter(id, address);
             vaccinationCenter.put(id, center);
             logger.info("Center created correctly");
+            return ("Center created correctly");
 
         }
 
@@ -41,37 +39,46 @@ public class VaccinationInfo {
 
 
 
-    public void vaccinationAdvance(){
-        createCenter(1,  "Av. Nicolas de Ribera");
+    public String vaccinationAdvance(){
+        var result= "";
+        var builder = new StringBuilder();
         var it = vaccinationCenter.entrySet().iterator();
         while (it.hasNext()) {
-            HashMap.Entry pair = it.next();
+            Map.Entry<Integer, VaccinationCenter> pair = it.next();
             var center = pair.getValue();
-            var vacc = (VaccinationCenter) center;
-            var result = " Vaccination Advance : "+ vacc.advace() + "\n";
+            var vacc =  center;
+            result = String.valueOf(builder.append(" Vaccination Advance : "+ vacc.advace() + "\n"));
             logger.info(result);
             it.remove();
         }
+        return result;
     }
 
-    public void vaccinationCoverage(){
-        createCenter(2,  "Jr. Medrano Silva");
+    public String vaccinationCoverage(){
         var it = vaccinationCenter.entrySet().iterator();
+        var result= "";
+        var builder = new StringBuilder();
         while (it.hasNext()) {
-            HashMap.Entry pair = it.next();
+            Map.Entry<Integer, VaccinationCenter> pair = it.next();
             var center = pair.getValue();
-            var vacc = (VaccinationCenter) center;
-            var result = " Vaccination Coverage : "+ vacc.coverage() + "\n";
+            var vacc =  center;
+            result = String.valueOf(builder.append(" Vaccination Coverage : "+ vacc.coverage() + "\n"));
             logger.info(result);
             it.remove();
         }
+        return result;
     }
 
-    public void closeCenter(Integer id){
-        if (vaccinationCenter.containsKey(id))
+    public String closeCenter(Integer id){
+        if (vaccinationCenter.containsKey(id)){
             vaccinationCenter.remove(id);
-        else
+            return "Successfully deleted";
+        }
+        else{
             logger.info("Vaccination center doesn't exist");
+            return "Vaccination center doesn't exist";
+        }
+
     }
 
     public Integer  numberVaccinationCenter(){
@@ -86,13 +93,15 @@ public class VaccinationInfo {
         totalVaccinationPartial+= number;
     }
 
-    public void showPartialVaccination(){
+    public String showPartialVaccination(){
         var result = "Number of partially vaccinated people : "+ totalVaccinationPartial + "\n";
         logger.info(result);
+        return  result;
     }
 
-    public void showCompleteVaccination(){
+    public String showCompleteVaccination(){
         var result = "Number of people fully vaccinated : "+ totalVaccinationCompleted + "\n";
         logger.info(result);
+        return result;
     }
 }

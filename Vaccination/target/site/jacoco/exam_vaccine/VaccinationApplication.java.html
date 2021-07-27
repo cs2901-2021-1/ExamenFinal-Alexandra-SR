@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>VaccinationApplication.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ExamenFinal-Alexandra-SR</a> &gt; <a href="index.source.html" class="el_package">exam_vaccine</a> &gt; <span class="el_source">VaccinationApplication.java</span></div><h1>VaccinationApplication.java</h1><pre class="source lang-java linenums">package exam_vaccine;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+import java.util.logging.Logger;
+
+<span class="nc" id="L7">public class VaccinationApplication {</span>
+<span class="nc" id="L8">    static final Logger logger = Logger.getLogger(VaccinationApplication.class.getName());</span>
+
+    public static void main(String[] args){
+<span class="nc" id="L11">        var user = new User();</span>
+<span class="nc" id="L12">        user.checkPassword();</span>
+<span class="nc" id="L13">        menu();</span>
+<span class="nc" id="L14">    }</span>
+
+    public static void menu(){
+<span class="nc" id="L17">        var flag = false;</span>
+<span class="nc" id="L18">        var scan = new Scanner(System.in);</span>
+<span class="nc" id="L19">        var vaccination=  new VaccinationInfo();</span>
+<span class="nc bnc" id="L20" title="All 2 branches missed.">        while (!flag) {</span>
+<span class="nc" id="L21">            logger.info(&quot;1.Vaccination Advance&quot;);</span>
+<span class="nc" id="L22">            logger.info(&quot;2. Vaccination Coverage&quot;);</span>
+<span class="nc" id="L23">            logger.info(&quot;3. Number of Vaccination Centers&quot;);</span>
+<span class="nc" id="L24">            logger.info(&quot;4. Number of partially vaccinated people&quot;);</span>
+<span class="nc" id="L25">            logger.info(&quot;5. Number of people fully vaccinated&quot;);</span>
+<span class="nc" id="L26">            logger.info(&quot;6. Create vaccination center&quot;);</span>
+<span class="nc" id="L27">            logger.info(&quot;7. Close vaccination center&quot;);</span>
+<span class="nc" id="L28">            logger.info(&quot;8. Log out &quot;);</span>
+            try {
+<span class="nc" id="L30">                logger.info(&quot;Choose an option (1-6): &quot;);</span>
+<span class="nc" id="L31">                Integer option = scan.nextInt();</span>
+<span class="nc bnc" id="L32" title="All 9 branches missed.">                switch (option) {</span>
+                    case 1: {
+<span class="nc" id="L34">                        vaccination.vaccinationAdvance();</span>
+<span class="nc" id="L35">                        flag = true;</span>
+<span class="nc" id="L36">                        break;</span>
+                    }
+                    case 2:{
+<span class="nc" id="L39">                        vaccination.vaccinationCoverage();</span>
+<span class="nc" id="L40">                        flag = true;</span>
+<span class="nc" id="L41">                        break;</span>
+                    }
+                    case 3:{
+<span class="nc" id="L44">                        Integer number = vaccination.numberVaccinationCenter();</span>
+<span class="nc" id="L45">                        var result = &quot;Number of Vaccination Centers : &quot;+ number + &quot;\n&quot;;</span>
+<span class="nc" id="L46">                        logger.info(result);</span>
+<span class="nc" id="L47">                        flag = true;</span>
+<span class="nc" id="L48">                        break;</span>
+                    }
+
+                    case 4:{
+<span class="nc" id="L52">                        vaccination.showPartialVaccination();</span>
+<span class="nc" id="L53">                        flag = true;</span>
+<span class="nc" id="L54">                        break;</span>
+
+                    }
+                    case 5:{
+<span class="nc" id="L58">                        vaccination.showCompleteVaccination();</span>
+<span class="nc" id="L59">                        flag = true;</span>
+<span class="nc" id="L60">                        break;</span>
+                    }
+                    case 6:{
+<span class="nc" id="L63">                        var scanCenter = new Scanner(System.in);</span>
+<span class="nc" id="L64">                        logger.info(&quot;Please introduce the address of the center: &quot;) ;</span>
+<span class="nc" id="L65">                        String address = scanCenter.nextLine();</span>
+<span class="nc" id="L66">                        logger.info(&quot;Please introduce the id (Integer number): &quot;) ;</span>
+<span class="nc" id="L67">                        Integer id = scanCenter.nextInt();</span>
+<span class="nc" id="L68">                        vaccination.createCenter( id, address);</span>
+<span class="nc" id="L69">                        flag = true;</span>
+<span class="nc" id="L70">                        break;</span>
+                    }
+                    case 7:{
+<span class="nc" id="L73">                        var scanDelete = new Scanner(System.in);</span>
+<span class="nc" id="L74">                        logger.info(&quot;Please introduce the id of the center (Integer number): &quot;) ;</span>
+<span class="nc" id="L75">                        Integer id = scanDelete.nextInt();</span>
+<span class="nc" id="L76">                        vaccination.closeCenter(id);</span>
+<span class="nc" id="L77">                        flag = true;</span>
+<span class="nc" id="L78">                        break;</span>
+                    }
+                    case 8:
+<span class="nc" id="L81">                        logger.info(&quot;Logged out &quot;);</span>
+<span class="nc" id="L82">                        flag = true;</span>
+<span class="nc" id="L83">                        break;</span>
+                    default:
+<span class="nc" id="L85">                        logger.info(&quot;Only numbers between 1 and 6 &quot;);</span>
+                }
+<span class="nc" id="L87">            } catch (InputMismatchException e) {</span>
+<span class="nc" id="L88">                logger.info(&quot;Input is an integer number&quot;);</span>
+<span class="nc" id="L89">            }</span>
+        }
+
+<span class="nc" id="L92">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
